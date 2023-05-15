@@ -1,0 +1,605 @@
+body {
+    margin: 0;
+    background: black;
+}
+
+header {
+    grid-area: header;
+    height: 200px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 223, 255, 0.5) 100%);
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+footer {
+    grid-area: footer;
+    height: 300px;
+    background: rgba(217, 217, 217, 0.25);
+    justify-content: flex-end;
+    gap: 3vw;
+}
+
+.page-container {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "content"
+        "footer";
+    grid-template-rows: auto auto auto;
+    background-image: url(images/bg-pawel-czerwinski-SElyqKdkJkE-unsplash-modified.png),
+        url(images/bg-pawel-czerwinski-YasCNbkczX0-unsplash.jpg),
+        url(images/bg-sachin-khadka-ElqtpSI-V9o-unsplash.jpg),
+        url(images/bg-marek-piwnicki-eBoUd9Fdm8Y-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center 200px, center 17%, center 61%, center 105%;
+}
+
+
+/* CONTAINERS */
+
+.main-container {
+    grid-area: content;
+}
+
+.main-content-container {
+    width: 70%;
+    margin: 0 0 30vw 0;
+    display: grid;
+    grid-template-rows: repeat(7, min-content);
+    justify-items: center;
+    position: relative;
+    top: 15vw;
+}
+
+.header-main-container {
+    width: 80%;
+    height: 200px;
+    justify-content: space-between;
+}
+
+.header-container-top {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.header-container-bottom {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.nav-container {
+    width: 80%;
+}
+
+.nav-container nav {
+    position: relative;
+}
+
+.nav-container a {
+    color: white;
+    font-family: oxanium-extra-light, sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.3rem;
+}
+
+.button-container button {
+    width: 15rem;
+    height: 3rem;
+}
+
+.sample-container {
+    height: 35vw;
+    gap: 2rem;
+}
+
+.sample-image-container {
+    align-items: center;
+}
+
+.sample-image-container::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    background-color: rgba(0, 223, 255, 0.4);
+}
+
+.gallery-container {
+    height: 50vw;
+    width: 100%;
+}
+
+.gallery-bg-container {
+    width: 145%;
+    height: 40vw;
+    background-color: rgba(255, 255, 255, 0.15);
+    position: absolute;
+    left: -23%;
+}
+
+.gallery-image-container {
+    height: 30rem;
+    width: 210rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.feedback-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow-container {
+    width: 60vw;
+    height: 10rem;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(220%);
+}
+
+.pricing-container {
+    width: 100%;
+    height: 140rem;
+    flex-direction: column;
+}
+
+.pricing-box-container {
+    width: 100%;
+    flex-direction: column;
+    gap: 10vw;
+}
+
+.pricing-box-container .text-box {
+    width: 18vw;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.basic-pricing-container, .standard-pricing-container, .premium-pricing-container {
+    width: 100%;
+}
+
+.basic-pricing-container {
+    height: 25rem;
+}
+
+.standard-pricing-container {
+    height: 27rem;
+}
+
+.premium-pricing-container {
+    height: 30rem;
+}
+
+.pricing-image-container img {
+    position: absolute;
+    box-shadow: -15px 17px 14px -3px rgba(0, 0, 0, 0.3);
+}
+
+/* BOXES */
+
+.content-box-just-center {
+    display: flex;
+    justify-content: center;
+}
+
+.content-box-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-box {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.intro {
+    justify-content: space-between;
+    gap: 6vw;
+    height: 30rem;
+}
+
+.intro .text-box {
+    text-align: right;
+    align-items: flex-end;
+}
+
+.intro .text-box p {
+    font-family: red-hat-light, sans-serif;
+    font-size: 1.8rem;
+}
+
+.text-box span {
+    width: 90%;
+}
+
+.text-box button {
+    width: 11rem;
+    height: 2.5rem;
+    margin: 2rem 0;
+}
+
+span.text-box-big {
+    height: 25vw;
+    width: 85%;
+    align-items: flex-end;
+}
+
+.gallery-content-box {
+    height: auto;
+    width: 70%;
+    gap: 3rem;
+}
+
+.basic-pricing-content-box, .standard-pricing-content-box, .premium-pricing-content-box {
+    width: 100%;
+    background-color: rgba(0, 223, 255, 0.25);
+    gap: 1rem;
+}
+
+.basic-pricing-content-box {
+    height: 20rem;
+}
+
+.standard-pricing-content-box {
+    height: 22rem;
+}
+
+.premium-pricing-content-box {
+    height: 25rem;
+}
+
+.text-box-huge {
+    width: 90%;
+    flex-direction: column;
+    text-align: center;
+    gap: 7vw;
+}
+
+/* FEEDBACK CARDS */
+
+.feedback-container {
+    flex-direction: column;
+}
+
+.feedback-card {    /* MUST BE AFTER CONTENT-BOX */
+    height: 25vw;
+    width: 50vw;
+    padding: 1vw 1vw 1vw 2.5vw;
+    background-color: rgba(217, 217, 217, 0.3);
+    gap: 2.5vw;
+    align-items: flex-start;
+}
+
+.card-image-container img {
+    height: 25vw;
+    box-shadow: -15px 17px 14px -3px rgba(0, 0, 0, 0.25);
+}
+
+.card-text-box span {
+    position: absolute;
+    transform: translate(90%, -15%);
+}
+
+#white-arrow-left, #white-arrow-right {
+    height: 10rem;
+}
+
+/* IMAGES AND ICONS */
+
+img {
+    width: auto;
+}
+
+#logo {
+    width: 12rem;
+}
+
+.intro img {
+    height: 30rem;
+    box-shadow:
+        0 6px 20px 30px rgba(0, 0, 0, 0.3),
+        0 6px 20px 10px rgba(0, 0, 0, 0.5);
+}
+
+.sample-box-image {
+    height: 400px;
+    box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+#black-arrow-right {
+    height: 2rem;
+}
+
+.gallery-sample-image {
+    box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+}
+
+.gallery-sample-image.small {
+    height: 350px;
+    transform: translateY(-30%);
+}
+
+.gallery-sample-image.medium {
+    height: 400px;
+    transform: translate(30%, 20%);
+}
+
+.gallery-sample-image.large {
+    height: 450px;
+    transform: translateX(95%);
+}
+
+#basic-img-one {
+    height: 18rem;
+    z-index: 1;
+}
+
+#basic-img-two {
+    height: 30rem;
+    right: 1rem;
+}
+
+#standard-img-one {
+    height: 27rem;
+    z-index: 1;
+}
+
+#standard-img-two {
+    height: 20rem;
+    right: 1rem;
+}
+
+#premium-img {
+    height: 40rem;
+    right: 1rem;
+}
+
+/* BUTTONS */
+
+button {
+    all: unset;
+    display: block;
+    border-radius: 12px;
+    position: relative;
+    box-shadow:
+        0 17px 15px rgba(0, 0, 0, 0.25),
+        0 23px 24px 12px rgba(0, 0, 0, 0.5);
+}
+
+.yellow {
+    background: #E5B91E;
+}
+
+.white {
+    background: white;
+}
+
+.button-align-right {
+    border-right: 17px solid black;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.button-align-left {
+    border-left: 17px solid black;
+    padding-left: 20px;
+}
+
+.button-align-middle {
+    align-items: center;
+}
+
+.tall-button {
+    height: 5rem;
+    width: 12rem;
+    padding: 0 0.5rem 0 1rem;
+    gap: 0.5rem;
+}
+
+.wide-button {
+    height: 4rem;
+    width: 24rem;
+}
+
+.gallery-image-container .button-align-middle {
+    position: absolute;
+    transform: translate(100%, -30%);
+}
+
+.button-align-right, .button-align-left, .button-align-middle {
+    color: black;
+    font-family: oxanium-bold, sans-serif;
+    font-size: 1.5rem;
+}
+
+button.sample-button {
+    height: 80px;
+    width: 250px;
+    position: absolute;
+    transform: translateY(-30px);
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 0;
+    box-shadow: 0 13px 12px 4px rgba(255, 255, 255, 0.4);
+}
+
+/* TEXTS */
+
+header h1, footer h1{
+    display: inline-block;
+    margin: 1rem 1rem 0 1rem;
+    font-size: 2.2vw;
+    letter-spacing: 0.9rem;
+    text-shadow: 0 10px 3px rgba(0, 0, 0, 0.25);
+}
+
+.name {
+    font-family: 'oxanium-extra-bold', sans-serif;
+    color: #E5B91E;
+}
+
+.x, .company-name {
+    font-family: 'oxanium-extra-light', sans-serif;
+}
+
+.company-name {
+    color: white;
+}
+
+.x {
+    color: black;
+}
+
+.in-footer {
+    color: white;
+}
+
+span.text-box-big p, .sample-button p {
+    margin: 0;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.sample-button p {
+    font-family: 'oxanium-extra-light';
+}
+
+.text-box-huge p {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.pricing-main-headline {
+    align-self: flex-start;
+}
+
+.pricing-headline {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    margin-left: 1.5rem;
+}
+
+.pricing-container h2 {
+    color: #E5B91E;
+    margin: 0;
+}
+
+.wide-button h2 {
+    font-family: 'oxanium-bold', sans-serif;
+    text-shadow: none;
+    margin: 0;
+}
+
+
+h2 {
+    font-family: 'oxanium-extra-bold', sans-serif;
+    font-size: 2.6rem;
+    text-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+    font-family: 'oxanium-extra-bold', sans-serif;
+    font-size: 2.3rem;
+    text-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+h4 {
+    font-family: 'oxanium-extra-bold', sans-serif;
+    font-size: 2rem;
+    text-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+header .button-container h4{
+    font-family: 'oxanium-bold', sans-serif;
+    margin: 0;
+    text-shadow: none;
+}
+
+h5 {
+    font-family: 'red-hat-regular', sans-serif;
+    font-size: 2rem;
+    color: white;
+}
+
+h6 {
+    font-family: 'oxanium-extra-light';
+    font-size: 1.5vw;
+    color: white;
+}
+
+p {
+    color: white;
+    font-family: 'red-hat-light';
+    font-size: 1.2rem;
+}
+
+.p-ital {
+    font-family: 'red-hat-light-italic', sans-serif;
+}
+
+.feedback-card p {
+    font-size: 1.2vw;
+}
+
+/* LINKS */
+
+a {
+    text-decoration: none;
+}
+
+/* LISTS */
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+/* FONTS */
+
+@font-face {
+    font-family: oxanium-extra-light;
+    src: url(fonts/Oxanium-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: oxanium-bold;
+    src: url(fonts/Oxanium-Bold.ttf);
+}
+
+@font-face {
+    font-family: oxanium-extra-bold;
+    src: url(fonts/Oxanium-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: red-hat-light;
+    src: url(fonts/RedHatDisplay-Light.ttf);
+}
+
+@font-face {
+    font-family: red-hat-regular;
+    src: url(fonts/RedHatDisplay-Regular.ttf);
+}
+
+@font-face {
+    font-family: red-hat-light-italic;
+    src: url(fonts/RedHatDisplay-LightItalic.ttf);
+}
